@@ -16,7 +16,7 @@ AIAgent agent = new AzureOpenAIClient(
         new Uri(endpoint),
         new DefaultAzureCredential())
     .GetChatClient(deploymentName)
-    .AsAIAgent(instructions: "You are a specialist in linkeind post writer that creates a post based on a link.", name: "writer",
+    .AsAIAgent(instructions: "You are a specialist in linkedin post writer that creates a post based on a link.", name: "writer",
         tools: new List<AITool>
         {
             new WebBrowsingTool(new WebBrowsingToolOptions() { AllowPublicNetworks = true})

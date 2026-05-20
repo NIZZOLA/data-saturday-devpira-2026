@@ -14,7 +14,7 @@ AIAgent writer = new AzureOpenAIClient(
         new Uri(endpoint),
         new DefaultAzureCredential())
     .GetChatClient(deploymentName)
-    .AsAIAgent(instructions: "You are a specialist in linkeind post writer", name: "writer");
+    .AsAIAgent(instructions: "You are a specialist in linkedin post writer", name: "writer");
     
 var session = await writer.CreateSessionAsync();
 
@@ -29,7 +29,7 @@ AIAgent reviewer = new AzureOpenAIClient(
         new Uri(endpoint),
         new DefaultAzureCredential())
     .GetChatClient(deploymentName)
-    .AsAIAgent(instructions: "You are a specialist in review linkeind post and suggest changes, dont add suggestions after the review", name: "reviewer");
+    .AsAIAgent(instructions: "You are a specialist in review linkedin post and suggest changes, dont add suggestions after the review", name: "reviewer");
 
 var reviewSession = await reviewer.CreateSessionAsync();
 
