@@ -15,7 +15,7 @@ AIAgent agent = new AzureOpenAIClient(
         new Uri(endpoint),
         new DefaultAzureCredential())
     .GetChatClient(deploymentName)
-    .AsAIAgent(instructions: "You are a specialist in linkeind post writer", name: "writer");
+    .AsAIAgent(instructions: "You are a specialist in linkedin post writer", name: "writer");
     
 var session = await agent.CreateSessionAsync();
 
